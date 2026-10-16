@@ -1,13 +1,12 @@
-package com.rafael.firstapplication
+package com.luisotaviodias.firstapplication
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.rafael.firstapplication.databinding.ActivityMainBinding
+import com.luisotaviodias.firstapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -25,13 +24,11 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        //val button = findViewById<Button>(R.id.button)
-        //val editText = findViewById<EditText>(R.id.editText)
-        val editText = binding.editText
-        val button = binding.button
-
-        button.setOnClickListener { view ->
-            println(editText.text)
+        binding.button.setOnClickListener {
+            // Lê os valores atuais dos dois campos no momento do toque.
+            val email = binding.editText.text.toString()
+            val senha = binding.editTextPassword.text.toString()
+            Toast.makeText(this, "Email: $email\nSenha: $senha", Toast.LENGTH_LONG).show()
         }
     }
 }

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.rafael.firstapplication"
+    namespace = "com.luisotaviodias.firstapplication"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.rafael.firstapplication"
+        applicationId = "com.luisotaviodias.firstapplication"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
